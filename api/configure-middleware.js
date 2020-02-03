@@ -7,7 +7,7 @@ const sessionConfig = {
     name: 'sprinkles',
     secret: 'keep it secret, keep it safe',
     cookie: {
-        maxAge: 31536000,
+        maxAge: 31536000000,
         secure: false, 
         httpOnly: true,
     },

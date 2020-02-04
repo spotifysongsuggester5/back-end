@@ -50,4 +50,16 @@ As of right now the shape of the data is :
 
 [DELETE] to /api/songs/:id removes the song using the id passed as part of the URL .
 
+UPDATE: I've added additional endpoints for authorization, and they are as follows
 
+[POST] to /api/auth/login : I've added a default admin user. To log in as admin pass in the following credentials in the body of the request: {username: 'admin2', password: 'Lambda1234$'}
+ 
+ **Only Admin2 may access the following endpoints**
+ 
+[GET] to /api/users  : returns a list of users and passwords
+
+[POST] to /api/users  : creates a new user entry. Does not register user, but adds them to your list of users. Requires { username: "Name Here" password: "Password Here"} in the body of the request.
+
+[PUT] to /api/users/:id  : updates the user using the id passed as part of the URL. Send the user object with the updated information as the body of the request.
+
+[DELETE] to /api/users/:id  : removes the song using the id passed as part of the URL .

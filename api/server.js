@@ -22,7 +22,7 @@ server.use(express.json());
 server.use(express.Router());
 
 server.use('/api/auth', authRouter);
-server.use('/api/songs', authenticate, songsRouter);
+server.use('/api/songs', songsRouter); //removed authenticate BH
 server.use('/api/users', usersAuth, usersRouter);
 
 server.get('/', (req,res) => {
